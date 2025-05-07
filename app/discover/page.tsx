@@ -33,23 +33,21 @@ const Discover: React.FC = () => {
   return (
     <main className="flex flex-col gap-20">
       <section className="w-full flex flex-col gap-4">
-        <h2>Upcoming Events</h2>
+        <h2>Discover Events</h2>
         <aside className="grid grid-cols-1 md:grid-cols-5 gap-2">
           <Input
             placeholder="Enter country"
             value={country}
-            className="col-span-2"
+            className="md:col-span-2"
             onChange={(e) => setCountry(e.target.value)}
           />
           <Input
             placeholder="Enter city"
             value={city}
-            className="col-span-2"
+            className="md:col-span-2"
             onChange={(e) => setCity(e.target.value)}
           />
-          <Button className="col-span-1" onClick={handleSearch}>
-            Discover
-          </Button>
+          <Button onClick={handleSearch}>Discover</Button>
         </aside>
         {hookEvents.length > 0 ? (
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
